@@ -2,15 +2,13 @@
 <html>
 <head>
 <title>Update meta tag dynamically</title>
-<meta property="og:title" content="<var id="demo"></var>"/>
+<meta property="og:title" content="id=demo"/>
 </head>
-        <body>
-                                            <h1>Knox E-FOTA One release notes—February 26, 2020</h1>
-                                        
-        <!-- finds the h1 on each page and inserts it into the meta tag: og-title. Only have 1 h1 on each page. -->
-        <script>/* <![CDATA[ */
-			var pageTitle = document.getElementsByTagName('h1');
-			document.getElementById("demo").innerHTML = pageTitle[0].innerHTML;									
-		/* ]]> */</script>
-    
-</body></html>
+	<body>
+		<h1>First header</h1>
+		<script>
+		var pageTitle = document.getElementsByTagName('h1');
+		document.getElementById("demo").innerHTML = pageTitle[0].innerHTML;
+		</script>
+	</body>
+</html>
