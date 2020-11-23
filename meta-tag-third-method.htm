@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test</title>
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.8.2.js'></script>
+</head>
+<body>
+<h1>Header</h1>
+<script type='text/javascript'>
+	var metaTitle = document.getElementsByTagName('h1')[0];
+    $('head').append( '<meta name="description" content="' +  metaTitle + '">' );
+</script>
+</body>
+</html>
