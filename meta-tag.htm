@@ -1,14 +1,19 @@
-
+<!DOCTYPE html>
 <html>
 <head>
-<title>Update meta tag dynamically</title>
-<meta property="og:title" content="id=demo"/>
+<title>Dynamic Meta tags</title>
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.8.2.js'></script>
 </head>
-	<body>
-		<h1>First Header</h1>
-		<script>
-		var pageTitle = document.getElementsByTagName('h1');
-		document.getElementById("demo").innerHTML = pageTitle[0].innerHTML;
-		</script>
-	</body>
+<body>
+<h1>Header1</h1>
+<h1>Header2</h1>
+<h1>Header3</h1>
+
+<script type='text/javascript'>
+    $(document).ready(function(){
+        var metaTitle = $('h1:eq(n)').text();
+        $('head').append( '<meta name="description" content="' +  metaTitle + '">' );
+    });
+</script>
+</body>
 </html>
